@@ -1,8 +1,97 @@
-.header {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-.header-second {
-  text-align: center;
+.header {
+  height: 100vh;
+}
+
+.header .navigation {
+  width: 60%;
+  height: 100vh;
+  background-color: #444;
+  z-index: 2;
+  position: absolute;
+  left: -60%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+.header .navigation .burger-menu {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  left: 100%;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.header .navigation .burger-menu__item {
+  width: 50%;
+  height: 3px;
+  background-color: #000;
+  border-radius: 25%;
+}
+
+.header .navigation .burger-menu__item:nth-child(1) {
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+}
+
+.header .navigation .burger-menu__item:nth-child(3) {
+  -webkit-transform: translateY(5px);
+          transform: translateY(5px);
+}
+
+.header .navigation__list {
+  list-style: none;
+}
+
+.header .navigation__list-item {
+  padding: 15px 0;
+  font-size: 21px;
+}
+
+.header .navigation__list-item a {
+  text-decoration: none;
+  color: #DDD;
+}
+
+.header .navigation--open {
+  left: 0;
+}
+
+.header__background-slider {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+  background-color: #999;
 }
 /*# sourceMappingURL=main.css.map */
