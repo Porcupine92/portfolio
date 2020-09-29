@@ -93,7 +93,7 @@
   height: 100vh;
   z-index: 1;
   background: url("../../assets/slider/smallSlider1.jpg") center center no-repeat;
-  background-size: contain;
+  background-size: cover;
 }
 
 .header__background-slider .header__logo {
