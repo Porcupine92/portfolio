@@ -50,6 +50,7 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  cursor: pointer;
 }
 
 .header .navigation .burger-menu__item {
@@ -62,6 +63,8 @@
 .header .navigation .burger-menu__item:nth-child(1) {
   -webkit-transform: translateY(-5px);
           transform: translateY(-5px);
+  -webkit-animation: burger-anim 1s infinite;
+          animation: burger-anim 1s infinite;
 }
 
 .header .navigation .burger-menu__item:nth-child(3) {
@@ -92,8 +95,7 @@
   width: 100vw;
   height: 100vh;
   z-index: 1;
-  background: url("../../assets/slider/smallSlider1.jpg") center center no-repeat;
-  background-size: cover;
+  background-color: #999;
 }
 
 .header__background-slider .header__logo {
@@ -110,17 +112,109 @@
   width: 100%;
   height: 100%;
   border-radius: 40%;
+  cursor: pointer;
 }
 
 .header__background-slider .header__my-name {
+  color: #34495e;
   position: absolute;
-  top: 100px;
+  top: 150px;
   right: 25px;
 }
 
 .header__background-slider .header__title {
+  color: #f1c40f;
   position: absolute;
-  top: 130px;
+  top: 180px;
   right: 25px;
+}
+
+.header__background-slider .slider {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header__background-slider .slider__images {
+  width: 100vw;
+  height: 100vh;
+}
+
+.header__background-slider .slider__images:nth-child(2) {
+  background: url("../../assets/slider/smallSlider1.jpg") center center no-repeat;
+  background-size: cover;
+}
+
+.header__background-slider .slider__images:nth-child(3) {
+  background: url("../../assets/slider/smallSlider2.jpg") center center no-repeat;
+  background-size: cover;
+}
+
+.header__background-slider .slider__images:nth-child(4) {
+  background: url("../../assets/slider/smallSlider3.jpg") center center no-repeat;
+  background-size: cover;
+}
+
+.header__background-slider .slider__images:nth-child(5) {
+  background-size: cover;
+  background: url("../../assets/slider/smallSlider4.jpg");
+}
+
+.header__background-slider .slider__arrow {
+  width: 50px;
+  height: 50px;
+  background-color: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  top: 45vh;
+  border-radius: 50%;
+  border: black 1px solid;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+
+.header__background-slider .slider__arrow span {
+  font-size: 30px;
+  color: #f1c40f;
+}
+
+.header__background-slider .slider__arrow:nth-child(1) {
+  left: 5vw;
+}
+
+.header__background-slider .slider__arrow:nth-child(6) {
+  left: 80vw;
+}
+
+@-webkit-keyframes burger_anim {
+  from {
+    -webkit-transform: translateY(-5px);
+            transform: translateY(-5px);
+  }
+  to {
+    -webkit-transform: translateY(5px);
+            transform: translateY(5px);
+  }
+}
+
+@keyframes burger_anim {
+  from {
+    -webkit-transform: translateY(-5px);
+            transform: translateY(-5px);
+  }
+  to {
+    -webkit-transform: translateY(5px);
+            transform: translateY(5px);
+  }
 }
 /*# sourceMappingURL=main.css.map */
